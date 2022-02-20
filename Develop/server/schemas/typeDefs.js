@@ -32,3 +32,5 @@ const typeDefs = gql`
         deleteBook
     }
 `;
+
+module.exports = typeDefs;

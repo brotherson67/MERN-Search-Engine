@@ -13,3 +13,5 @@ const resolvers = {
     deleteBook: {},
   },
 };
+
+module.exports = resolvers;
