@@ -3,8 +3,10 @@ const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
   Query: {
-    getUser: async (parent, { _id }) => {
-      return User.findOne({ _id });
+    me: async (parent, args) => {
+      const userData = await User.findOne({})
+        .select("-__v -password")
+        .populate("savedBooks");
     },
   },
   Mutation: {
