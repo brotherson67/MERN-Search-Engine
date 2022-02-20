@@ -1,21 +1,12 @@
 import gql from "@apollo/client";
 
-const QUERY_ME = gql`
-  {
-    me {
-      _id
-      username
-      email
-      savedBooks {
-        title
-        authors
-        bookId
-        link
-        image
-        description
-      }
-    }
-  }
+const USER_LOGIN = gql`
+mutation login()
+
 `;
 
-export default QUERY_ME;
+const CREATE_USER = gql``;
+
+const SAVE_BOOK = gql``;
+
+const DELETE_BOOK = gql``;
