@@ -12,7 +12,18 @@ export const USER_LOGIN = gql`
   }
 `;
 
-export const CREATE_USER = gql``;
+export const CREATE_USER = gql`
+mutation createUser($username: String!, $email: String!, $password; String!) { 
+    createUserO(username: $username, email: $email, password: $password){
+        token
+        user {
+            _id 
+            email
+            username
+        }
+    }
+}
+`;
 
 export const SAVE_BOOK = gql``;
 
